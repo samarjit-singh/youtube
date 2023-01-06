@@ -9,7 +9,7 @@ import { deleteProduct, getProducts } from "../../redux/apiCalls";
 export default function ProductList() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
-
+  // const products = "";
   useEffect(() => {
     getProducts(dispatch);
   }, [dispatch]);
@@ -33,7 +33,7 @@ export default function ProductList() {
         );
       },
     },
-    { field: "inStock", headerName: "Stock", width: 200 },
+    { field: "inStock", headerName: "InStock", width: 200 },
     {
       field: "price",
       headerName: "Price",
